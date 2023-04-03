@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            
+            background-color: rgb(220, 119, 229);
+            color:rgb(0, 0, 0);
+            width: 300px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+
+        input{
+            border: none;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        span {
+            border-radius: 30px;
+            margin-bottom: 10px;
+            height: 20px;
+            width: 50px;
+            padding: 10px 18px;
+            background-color: white;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="" style="padding: 10px;">
+            <label for="" id="p1" onmouseover="sum3()">First Amount:</label><br>
+
+            <input type="text" id="price1" name="f_name"><br>
+
+            <label for="" id="p2" onmouseover="sum4()">Third Amount:</label><br>
+
+            <input type="text" id="price2" name="l_name"><br>
+
+            <label for="" id="p3" onmouseover="sum5()">Second Amount:</label><br>
+
+            <input type="text" id="price3" name="t_name"><br>
+
+            <label for="" id="p4" onmouseover="sum6()">Fourth Amount:</label><br>
+
+            <input type="text" id="price4" name="l_name"><br>
+
+            <label for="" id="p5" onmouseover="sum7()">Fifth Amount:</label><br>
+
+            <input type="text" id="price5" name="t_name"><br>
+
+            <label for="" id="p6" onmouseover="sum8()">%Off:</label><br>
+
+            <input type="text" id="%Off" name="t_name"><br>
+
+            <label for="" id="p7" onmouseover="sum9()">18% GST:</label><br>
+
+            <input type="text" id="18%GST" name="t_name"><br>
+
+            <input type="submit" value="submit" onmouseover="sum2()" name="aa" style="  width:80px;"> <br><br>
+            
+            <span>Sub total = <span id="subtotal"></span>
+            </span><br><br><br>
+
+            <span>off = <span id="off-rs"></span>
+            </span><br><br><br>
+
+            <span>GST = <span id="gst"></span>
+            </span><br><br><br>
+
+            <span>Total = <span id="sdemo"></span>
+            </span><br><br>
+            
+        </div>
+
+        </form>
+   
+    <script>
+
+        function sum2() {
+            var a = parseInt(document.getElementById("price1").value);
+            var b = parseInt(document.getElementById("price2").value);
+            var c = parseInt(document.getElementById("price3").value);
+            var d = parseInt(document.getElementById("price4").value);
+            var e = parseInt(document.getElementById("price5").value);
+            var f = parseInt(document.getElementById("%Off").value);
+            var g = parseInt(document.getElementById("18%GST").value);
+            var h = a + b + c + d + e;
+            var i = h / 100 * f;
+            var j = h - i;
+            var k = j / 100 * g;
+            var l = j + k;
+
+            
+
+
+            // console.log(f)
+            document.getElementById("subtotal").innerHTML = h;
+            document.getElementById("off-rs").innerHTML = i;
+            document.getElementById("gst").innerHTML = k;
+            document.getElementById("sdemo").innerHTML = l;
+
+            
+
+        }
+
+        function sum3() {
+
+            document.getElementById("p1").style.color = "blue";
+            document.getElementById("p1").style.textDecoration = "underline";
+
+
+        }
+        function sum4(){
+            document.getElementById("p2").style.color = "red";
+            document.getElementById("p2").style.textDecoration = "underline";
+
+
+        }
+
+        function sum5(){
+            document.getElementById("p3").style.color = "green";
+            document.getElementById("p3").style.textDecoration = "underline";
+
+            
+        }
+
+        function sum6(){
+            document.getElementById("p4").style.color = "orange";
+            document.getElementById("p4").style.textDecoration = "underline";
+
+        }
+
+        function sum7(){
+            document.getElementById("p5").style.color = "white";
+            document.getElementById("p5").style.textDecoration = "underline";
+
+            
+        }
+
+        function sum8(){
+            document.getElementById("p6").style.color = "aqua";
+            document.getElementById("p6").style.textDecoration = "underline";
+
+            
+        }
+
+        function sum9(){
+            document.getElementById("p7").style.color = "brown";
+            document.getElementById("p7").style.textDecoration = "underline";
+
+            
+        }
+    </script>
+</body>
+
+</html>
